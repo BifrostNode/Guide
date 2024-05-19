@@ -1,24 +1,67 @@
-# Bifrost Subgraph 开发者使用说明
+# Bifrost Subgraph Developer Guide
 
-欢迎使用 Bifrost Subgraph!本文档将指导您如何创建、部署和查询这个 subgraph。
+Welcome to the Bifrost Subgraph! This document will guide you through creating, deploying, and querying this subgraph.
 
-## 先决条件
+## Prerequisites
 
-在开始之前,请确保您已经:
+Before getting started, make sure you have:
 
-- 注册了一个 Bifrost 账户并获得了 API 密钥。
-  - 请访问以下链接之一并填写表格以申请 API 密钥:
+- Registered a Bifrost account and obtained an API key.
+  - Please visit one of the following links and fill out the form to apply for an API key:
     - [https://forms.gle/tijPPdW37hFX6QFG9](https://forms.gle/tijPPdW37hFX6QFG9)
-- 安装了 Graph CLI。
-- 安装了 Yarn 包管理器。
+- Installed the [Graph CLI](https://github.com/graphprotocol/graph-cli).
+- Installed the [Yarn package manager](https://yarnpkg.com/).
 
-## 创建 Subgraph
+## Creating a Subgraph
 
-1. 选择一个 subgraph 名称,格式为 `<用户名>/<subgraph名称>`,例如 "alice/mysubgraph"。
-   - `<用户名>`:这是您在 Bifrost 上的用户名。
-   - `<subgraph名称>`:这是您为 subgraph 选择的具体名称,通常反映 subgraph 的功能或其索引的智能合约。
+1. Choose a subgraph name in the format `<username>/<subgraph-name>`, for example, "alice/mysubgraph".
+   - `<username>`: This is your username on Bifrost.
+   - `<subgraph-name>`: This is the specific name you choose for your subgraph, which usually reflects the functionality of the subgraph or the smart contract it indexes.
 
-2. 在终端中运行以下命令,将 `{apikey}` 替换为您从上述链接申请获得的 Bifrost API 密钥,将 `<用户名/subgraph名称>` 替换为您选择的 subgraph 名称:
+2. Run the following command in your terminal, replacing `{apikey}` with your Bifrost API key obtained from the links above and `<username/subgraph-name>` with your chosen subgraph name:
 
 ```bash
-graph create --node https://bifrost.bfno.de/{apikey} <用户名/subgraph名称>
+graph create --node https://bifrost.bfno.de/{apikey} <username/subgraph-name>
+```
+
+## Removing a Subgraph
+
+If you need to remove a subgraph, run the following command in your terminal, replacing {apikey} with your Bifrost API key and <username/subgraph-name> with the name of the subgraph you want to remove:
+
+```bash
+graph remove --node https://bifrost.bfno.de/{apikey} <username/subgraph-name>
+```
+
+## Deploying a Subgraph
+
+Run the following command in your terminal to deploy your subgraph, replacing {apikey} with your Bifrost API key and <username/subgraph-name> with your subgraph name:
+
+```bash
+graph deploy --node https://bifrost.bfno.de/{apikey} --ipfs https://bifrost.bfno.de <username/subgraph-name>
+```
+
+## Querying a Subgraph
+
+Once deployed, you can use the following endpoints to query your subgraph:
+
+- GraphQL Endpoint:
+
+```bash
+https://bifrost.bfno.de/{apikey}/subgraphs/name/<username/subgraph-name>/graphql
+```
+
+- API Endpoint:
+
+```bash 
+https://bifrost.bfno.de/{apikey}/subgraphs/name/<username/subgraph-name>
+```
+
+Replace {apikey} with your Bifrost API key obtained from the links above and <username/subgraph-name> with your subgraph name.
+
+You can now use the standard GraphQL query language to query your Subgraph.
+
+## Support
+
+If you have any questions or feedback, please contact our support team at support@bfno.de. We're here to help!
+
+Happy subgraphing with Bifrost!
