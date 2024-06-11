@@ -21,7 +21,7 @@ Before getting started, make sure you have:
 2. Run the following command in your terminal, replacing `{apikey}` with your Bifrost API key obtained from the links above and `<username/subgraph-name>` with your chosen subgraph name:
 
 ```bash
-graph create --node https://bifrost.bfno.de/{apikey} <username/subgraph-name>
+graph create --node https://bitlayer.bfno.de/{apikey} <username/subgraph-name>
 ```
 
 ## Removing a Subgraph
@@ -29,7 +29,7 @@ graph create --node https://bifrost.bfno.de/{apikey} <username/subgraph-name>
 If you need to remove a subgraph, run the following command in your terminal, replacing {apikey} with your Bifrost API key and <username/subgraph-name> with the name of the subgraph you want to remove:
 
 ```bash
-graph remove --node https://bifrost.bfno.de/{apikey} <username/subgraph-name>
+graph remove --node https://bitlayer.bfno.de/{apikey} <username/subgraph-name>
 ```
 
 ## Deploying a Subgraph
@@ -37,7 +37,7 @@ graph remove --node https://bifrost.bfno.de/{apikey} <username/subgraph-name>
 Run the following command in your terminal to deploy your subgraph, replacing {apikey} with your Bifrost API key and <username/subgraph-name> with your subgraph name:
 
 ```bash
-graph deploy --node https://bifrost.bfno.de/{apikey} --ipfs https://bifrost.bfno.de <username/subgraph-name>
+graph deploy --node https://bitlayer.bfno.de/{apikey} --ipfs https://bitlayer.bfno.de <username/subgraph-name>
 ```
 
 ## Querying a Subgraph
@@ -47,13 +47,13 @@ Once deployed, you can use the following endpoints to query your subgraph:
 - GraphQL Endpoint:
 
 ```bash
-https://bifrost.bfno.de/{apikey}/subgraphs/name/<username/subgraph-name>/graphql
+https://bitlayer.bfno.de/{apikey}/subgraphs/name/<username/subgraph-name>/graphql
 ```
 
 - API Endpoint:
 
 ```bash 
-https://bifrost.bfno.de/{apikey}/subgraphs/name/<username/subgraph-name>
+https://bitlayer.bfno.de/{apikey}/subgraphs/name/<username/subgraph-name>
 ```
 
 Replace {apikey} with your Bifrost API key obtained from the links above and <username/subgraph-name> with your subgraph name.
